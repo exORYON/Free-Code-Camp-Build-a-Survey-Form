@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main id="main">
-    
+  <main class="center" id="main">
+    <div class="icons">
+      <a href="http://www.iek.irpin.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+      </svg></a>
+    </div>
+
+    <h1 id="title">Irpin Economic College Survey</h1>
+    <p id="description">
+      Last year was very hard, but still we want to know your opinion on some aspects of our college life.<br>
+      Please, answer the form below to make our college better.<span> — yours sincerely headmaster.</span>
+    </p> 
+  
+    <form id="survey-form" class="center">
+     
+      <fieldset class="center">
+        <h2>Tell us about yourself</h2>
+      
+      <div class="questions">
+        <div class="conainer">
+          <label for="name" id="name-label">Your name:</label>
+          <input type="text" id="name" name="name" placeholder="Homer" required>
+        </div>
+        <div class="container">
+          <label for="email" id="email-label">Your email:</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="container">
+          <label for="number" id="number-label">Your grade:</label>
+          <input type="number" id="number" name="number" placeholder="1" min="1" max="4">
+        </div>
+       
+        <div class="container">
+          <label for="dropdown">Your specialization</label>
+            <select name="dropdown" id="dropdown">
+              <option value="123">Engineering</option>
+              <option value="456">Economics</option>
+              <option value="789">Finances</option>
+              <option value="10">Marketing</option>
+            </select>
+        </div>
+      </div>
+      </fieldset>
+ 
+      <fieldset class="center">
+        <h2 class="topic-text">Rate our work</h2>
+
+        <div class="container mark">
+          <label>
+            5 <input type="radio" id="five" name="rating" value="5"> Very good
+          </label>
+        </div>
+        <div class="container mark">
+          <label>
+            4 <input type="radio" name="rating" value="4"> Good
+          </label>
+        </div>
+        <div class="container mark">
+          <label>
+            3 <input type="radio" name="rating" value="3"> Ok
+          </label>
+        </div>
+        <div class="container mark">
+          <label>
+            2 <input type="radio" name="rating" value="2"> Bad
+          </label>
+        </div>
+        <div class="container mark">
+          <label>
+            1 <input type="radio" name="rating" value="1"> Very bad
+          </label>
+        </div>
+
+        <h3 class="topic-text">What should we do next year?</h3>
+        
+        <div class="container check">
+          <div class="text">
+            <label for="coffeeshop">Make a coffee shop on the territory of the college</label>
+            <label for="repair">Repair the stadium and gym, update tennis rooms</label>
+            <label for="computers">To buy new computers for classrooms and teachers</label>
+            <label for="teachers">To invite new teachers and improve the knowledge of the others</label>
+          </div>
+
+          <div class="checkboxes">
+            <input id="coffeeshop" type="checkbox" name="check" value="coffeeshop">
+            <input id="repair" type="checkbox" name="check" value="repair">
+            <input id="computers" type="checkbox" name="check" value="computers">
+            <input id="teachers" type="checkbox" name="check" value="teachers">
+          </div>
+        </div>
+
+        <textarea> Leave us anything we have missed..</textarea>
+      </fieldset>
+      <button id="submit">SUBMIT</button>
+    </form>  
   </main>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+
 </html>
